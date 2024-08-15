@@ -1,9 +1,14 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const path = require('path');
+
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
+
+app.set('views', path.join(__dirname, 'views'));
+
 
 app.use('/public/', express.static('./public'));
 
