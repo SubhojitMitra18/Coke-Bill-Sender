@@ -109,5 +109,6 @@ app.post('/send-mail', async (req, res) => {
         res.send("Mail Not Sent");
     }
 })
+app.listen(3000, () => console.log("Server ready on port 3000."));
 
 module.exports=app
