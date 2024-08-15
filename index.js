@@ -112,7 +112,4 @@ router.post('/send-mail', async (req, res) => {
         res.send("Mail Not Sent");
     }
 })
-
-app.use('/.netlify/functions/api',router)
-
-module.exports.handler=serverless(app)  
+module.exports = app;
