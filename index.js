@@ -15,17 +15,17 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     const flag = 0;
     res.render('home', { 'flag': flag });
 });
 
-router.get('/newpage', (req, res) => {
+app.get('/newpage', (req, res) => {
     const flag = 1;
     res.render('home', { 'flag': flag });
 });
 
-router.post('/send-mail', async (req, res) => {
+app.post('/send-mail', async (req, res) => {
     const flag = 0;
     const customerEmail = req.body.customerEmail;
     const amount = req.body.amount; // Fixed spelling from 'ammount' to 'amount'
