@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="../public/style.css"> 
+    <link rel="stylesheet" href="/public/style.css"> 
 </head>
 <body>
     <div class="container">
@@ -9,12 +9,12 @@
         <form action="/send-mail" method="post">
             <label for="customerEmail">Enter Your Email to Receive the Bill:</label>
             <input type="email" name="customerEmail" id="customerEmail" required><br>
-            <label>Ammount:</label>
+            <label>Amount:</label>  <!-- Fixed spelling from "Ammount" to "Amount" -->
             <div class="radio-group">
-                <input type="radio" name="ammount" value="30" id="ammount30">
-                <label for="ammount30">30</label>
-                <input type="radio" name="ammount" value="35" id="ammount35">
-                <label for="ammount35">35</label>
+                <input type="radio" name="amount" value="30" id="amount30">  <!-- Fixed spelling from "ammount" to "amount" -->
+                <label for="amount30">30</label>
+                <input type="radio" name="amount" value="35" id="amount35">  <!-- Fixed spelling from "ammount" to "amount" -->
+                <label for="amount35">35</label>
             </div>
             <button type="submit">Click to Get the QR Code</button>
         </form>
