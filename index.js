@@ -9,7 +9,6 @@ app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, 'views'));
 
-
 app.use('/public/', express.static('./public'));
 
 const transporter = nodemailer.createTransport({
@@ -114,6 +113,9 @@ app.post('/send-mail', async (req, res) => {
         res.send("Mail Not Sent");
     }
 })
-app.listen(3000, () => console.log("Server ready on port 3000."));
+
+app.listen(5000,()=>{
+    console.log(`Server running on 5000`)
+})
 
 module.exports=app
