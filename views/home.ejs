@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="/public/styles.css">
+   <link rel="stylesheet" href="../public/style.css"> 
 </head>
 <body>
     <div class="container">
@@ -19,7 +19,7 @@
             <button type="submit">Click to Get the QR Code</button>
         </form>
 
-        <% if (flag !== 1) { %>
+        <% if (flag === 1) { %>
             <div class="qr-code">
                 <h1>Scan to Pay</h1>
                 <img src="/public/-0u90u.jpeg" alt="Payment QR Code" height="300" width="300">
