@@ -1,15 +1,12 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const serverless=require('serverless-http')
 const app = express();
 
-const router=express.Router()
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.use('/public/', express.static('./public'));
 
-// Directly include credentials (not recommended for production)
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -112,4 +109,7 @@ router.post('/send-mail', async (req, res) => {
         res.send("Mail Not Sent");
     }
 })
-module.exports = app;
+
+app.listen(5000,()=>{
+    console.log(`Server running on 5000`)
+})
